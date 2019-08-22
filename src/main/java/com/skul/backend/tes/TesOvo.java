@@ -21,6 +21,7 @@ public class TesOvo {
 	static String BUDGET = "v1.0/budget/detail";
 	static String BALANCE = "v1.0/api/front/";
 	static String WALLETTRANSACTION = "wallet/v2/transaction?page=1&limit1&productType=001";
+	static String LOGOUT = "v1.0/api/auth/customer/logout";
 	static String AWS = "https://apigw01.aws.ovo.id/";
 	static String appid = "C7UMRSMFRZ46D9GW9IK7";
 	static String AppVersion="2.8.0";
@@ -35,16 +36,16 @@ public class TesOvo {
 
 	public static void main(String[] args) {
 		
-//		doLogin();
+	//	doLogin();
 //		String smscode = "7115";
 //		String refid   = "743a606065874437be35416b4c6efe51";
-//		doLoginVeryfy("9996", "00d0b9fb4af248748a9f5f8ffd926fd3");
-		//doLoginSecurityCode("123456", "7475768a460646c2ae79f181f23bcbc6");
-		doGetWalletTransaction("eyJhbGciOiJSUzI1NiJ9.eyJleHBpcnlJbk1pbGxpU2Vjb25kcyI6NjA0ODAwMDAwLCJjcmVhdGVUaW1lIjoxNTY2MzgxOTA3OTAzLCJzZWNyZXQiOiJGa21mNlU0VU9VOEl0Q0ZQdS8yVjhWeWxLOTVjbmg0Q09XczJ6SUpCdCtRVFVvQWR1Y1hpR3gxcjV6cDlCQm1lb25wV25vaU9GRW1Hc3VFdVZGK0FRbDVEQzhNdFZpZVJvVVVwOC9BQW1rSTBDNWZLeGt3RzZYeG5EOWVWeGdtMURCenRWTjBGWGxlOUxiT1NSZUk0VTJ1aFZkb2kxdndPUVpFamlKamQ2T2tuZm5rUHkrSXhjbElkUDlzSGpTQ3FkTjZnUDZxbWZvSlJENHdSeEpMODhJajB0c3pYdmErSXpFNS9uTE11b1VBbklQZHhOMW9GZjVqektTS0tLNVRvdFJNMFJFTG5LRWxSWm1rUjk5MlJLSEhXdGplLzZQRUg0cis4RUZKL0Zyd3ZUbGRGcGgzVks1VE9qQzJ0QTFJemhjRW40NFZzeDVVaFBoK1lLbnRzUEE9PSJ9.Ghw48WZSk-rcc0wvavMcgk-r9aQk9P7DUoSQ6mPSKv2-l7L4IhY4k2LlTitEHE7G6hV__THQHtzA86Wuouw0Zp4dAIrOlxgpVNAuPQDugD9IVRZKH2HS9Cht_xuDKrIKVYCOfjKVKx6GVZzTQpCkAEVORyoYiGNciqk-f2q_HMTcnOt66i7sLtKx34kHnTgpQdvFSwOeFABZSsamcKC-zjDFF8Fvkn12QetQ6h7WhlChCFXMJS6d7Gf5yftXkBs1Hlsl2f-0hw0N_4xZtx9x_0lztyKswYzSMpIxWoWTTiPyzaBcpjRZgRek0XQVzPzh6dN0v-obWt6kIrNTzJ68cA");
+		//doLoginVeryfy("4927", "89983ba4fc87471fb1a5ba5bc4ea56c6");
+		//doLoginSecurityCode("123456", "2d8bb31e6a1a4e7e831856ff67b6dd01");
 		
+		String token="eyJhbGciOiJSUzI1NiJ9.eyJleHBpcnlJbk1pbGxpU2Vjb25kcyI6NjA0ODAwMDAwLCJjcmVhdGVUaW1lIjoxNTY2NDU0MjU5MjY2LCJzZWNyZXQiOiJGa21mNlU0VU9VOEl0Q0ZQdS8yVjhWeWxLOTVjbmg0Q09XczJ6SUpCdCtRVFVvQWR1Y1hpR3gxcjV6cDlCQm1lb25wV25vaU9GRW1Hc3VFdVZGK0FRbDVEQzhNdFZpZVJvVVVwOC9BQW1rSTBDNWZLeGt3RzZYeG5EOWVWeGdtMVVlTXVJdWlOaS9IK2pYUEowWFJLbnUxYUgxZ05rNHdLaUNRV3ZjVVV2Q3lVUXdHd3lIN2pXVDR6NWdPYWNiUFZqWXNHQVVZNFZ6RytocVI2Qlp6djJScGxLMmk3YXlwMnFqbjljUHIwdmtzNVBZSG9YSkorNlgxRDVkR1lxWStXaGc3anR0WWNtQVFXRzVJaVZrRjI3dFBrRFdwTTFDeUkxL3FhaXBqV0pHNzhxeFhnV1RtMnZEZEEySmIxYTBZZVlpNUZGK0dCU3FxRFhTM01sYTlQVlE9PSJ9.fxrvkEumy9olP-2E8ApoGORD1X5mvksQnAE2xDRC01Zn1j9WsFL7S_J5QYraSEaF-oueFbhZyYYoggFMKOPZpbx1i8mCG9OWU3rMDfyMJv4BZLTLmUP9sjMH_XwpQa8CrWGTxhpkMd0P5V2svxSjQV4PVoQ5TQMySQ8NgPBQRfpNykzppIpvQ8BNS_ViQd1wdxjwPgHUF7ASJAftrlIyhRLDMSWhxdTM4Rr_ApIXp0xVt5z0BwWq_0HYN3pWYg3xF_MiaplmgH2BYGuJahp5iR3CBs6-FvP8JumOBcGGAl0gsqlXKWmhK-LggxH7ky7NEMZt3xiVQN4y4_m8JsdyAg";
+		doGetWalletTransaction(token);
+	//	doLogout(token);
 		
-		
-
 	}
 	
 	private static void doLoginSecurityCode(String securityCode, String updateAccessToken){
@@ -69,6 +70,34 @@ public class TesOvo {
 			
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+	
+	private static void doLogout(String token){
+		try {
+			RestTemplate restTemplate = new RestTemplate();
+			
+			HttpHeaders headers = new HttpHeaders();
+			headers.setContentType(MediaType.APPLICATION_JSON);
+			headers.set("app-id", appid);
+			headers.set("App-Version", AppVersion);
+			headers.set("Authorization", token);
+			headers.set("OS", OS_NAME);
+			
+			HttpEntity<OvoDataSecurityCode> request = new HttpEntity<>(null,headers);
+			
+			ObjectMapper mapper2 = new ObjectMapper();
+			try {
+				System.out.println(mapper2.writeValueAsString(request));
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			ResponseEntity<String> exchange = restTemplate.exchange(BASE_ENDPOINT+LOGOUT, HttpMethod.GET, request, String.class);
+			System.out.println("code: "+exchange.getStatusCodeValue());
+			System.out.println("body: "+exchange.getBody());
+			
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
